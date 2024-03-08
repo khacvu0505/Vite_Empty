@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
+    "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
@@ -13,10 +13,11 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "declaration": true,
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"],
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "."
+    "jsx": "react-jsx"
   },
-  "include": ["src", "vitest.setup.js"],
+  "include": ["src", "./index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
